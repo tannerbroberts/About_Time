@@ -1,0 +1,2 @@
+// Just an example of an endpoint request being made
+GET http://localhost:3000;
