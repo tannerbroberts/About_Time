@@ -1,0 +1,83 @@
+Items:
+    Items are the fundamental unit in AT.
+    When first created, they are stored as a ItemTemplate
+    TemplateInstances can be scheduled on the time-line or within other ItemTemplates
+    When scheduled, a start-time and a priority level are assigned to the template instance
+    Items have a start time, an end time
+
+*******************************************************************************
+
+ItemTemplate: {
+    Name:String,
+    Length:Long,
+    Instances: Array<TemplateInstance>
+
+    Variables
+    Calculated Variable Summaries
+    color
+    tag list
+    busy
+    do date
+    Owner
+    Share Visibility
+}
+
+ItemName___
+|          |
+|___Width__|  (No start, relative end)
+
+TemplateInstance {
+    Parent: [TimeLine, OtherItemTemplate]
+    Start:Long,
+    Priority
+}
+
+ItemName___
+|          |
+Start      |Priority
+|          |
+|___Width__|
+
+*******************************************************************************
+
+TimeLine {
+    TemplateInstances: max-size-arry-100s
+}
+
+YearLine__________________________________________________________________________________________
+________J________F________M________A________M________J________J________A________S________O________
+Priority 0       Name____________     Name______________
+Priority 1                Name_____
+Priority 2
+Priority 3
+Priority 4
+Priority 5
+
+*******************************************************************************
+
+Accountability Queue {
+    Unaccounted_For_Templates: Array<TemplateInstance>
+}
+
+
+
+
+
+
+
+
+
+
+User logs in with credentials
+which sends a request to the REST API
+the API validates the User
+
+now the user gets access to their personal data
+
+The user has a:
+    TimeLine: Collection of type TemplateInstance
+    itemsLibrary: Collection of type ItemTemplate
+    variablesLibrary: Collection of type Variable
+    DisplayName: Unique String
+    email: Unique email
+    password: hashed
