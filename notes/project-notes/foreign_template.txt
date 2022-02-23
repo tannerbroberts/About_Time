@@ -1,11 +1,17 @@
-When a user doesn't own a Template/Instance, but is instead, using another user's T/I, they'll need to stay updated with what the current T/I looks like...
+When a user doesn't own a Template/Instance, but is instead, using another user's T/I, they may need to stay updated with what the current T/I looks like...
 
 That's going to be a whole aweful lot of updates...
 
-I currently like the idea of the user automatically sending a list of foreign Instances that they currently have scheduled in their timeline. That's like being "subscribed" to the single Instance, but only for as long as it's scheduled in their timeline. That way, the updates don't get pushed to every subscribed user all at once when an influencer updates their item, and lags out the server.
+I currently like the idea of the user automatically sending a list of foreign Instances that they currently have scheduled in their timeline. That's like being "subscribed" to the single Instance, but only for as long as it's scheduled in their timeline. That way, the server doesn't lag out with updates that get pushed to every subscribed user all at once when an influencer updates their Instance. It also makes it so that one-off subscriptions to Instances that require updates to be pushed to users automatically clean themselves up when they are finished. I think the creator will need to send a confirmation about the Instance being completed when they report on the Instance.
 
-At the same time, there are moments when a user needs to be updated about a changed Instance, like a pickup game of soccor. That Instance changing from 4pm to 5pm is a big deal for the people that are going to be playing, so I'm thinking that there needs to be a setting to let a creator "update subscribers when this item changes".
+At the same time, there are moments when a user needs to be updated about a changed Instance, like a pickup game of soccor. That Instance changing from 4pm to 5pm is a big deal for the people that are going to be playing, so I'm thinking that there needs to be a setting to let a creator "update subscribers when this Instance changes". Even more fine grained control would be nice, as in "update subscribers when <spesific aspect> of this Instance changes".
 
-I like people being able to share entire libraries of Templates, especially meals. Those templates aren't going to change much, but it'd be nice to have updated Templates if you want them. That'll have to be another setting.
+I like people being able to share entire libraries (containing Templates) of Templates, especially meal Templates, those are dope. Those templates aren't going to change much, but it'd be nice to have updated Templates if you want them. That'll have to be another setting?
+
+    Upon finding a foreign Template_________Subscribe____________Update automatically
+                                   |                            |
+                                   |________Copy (no updates)   |Ask me about updates
 
 Maybe a notifications center would be cool. A place where you can see everything that has changed, and maybe even the history of the change over time, like the wayback machine.
+
+Another idea is that of groups. It would be nice if you just subscribed to a single group, and you would automatically subscribe to every Instance shared to that group... That could possibly be done by simply subscribing to a containing Instance... yeah, if you follow a guy that is building a workout program, and you want to do the workouts as the guy builds them, then you subscribe to their containing Instance of the current workout. If you want to do their workouts on your own schedule, you'd find the associated Template.

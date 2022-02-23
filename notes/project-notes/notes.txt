@@ -1,16 +1,18 @@
-Items:
-    Items are the fundamental unit in AT.
-    When first created, they are stored as a ItemTemplate
-    TemplateInstances can be scheduled on the time-line or within other ItemTemplates
+Tempalte/Instances:
+    Tempalte/Instances are the fundamental unit in AT.
+    When first created, they are stored as a Template
+    Instances can be scheduled on the time-line or within other Template/Instances
     When scheduled, a start-time and a priority level are assigned to the template instance
-    Items have a start time, an end time
+    Tempalte/Instances have a start time, an end time
+
+    The only difference between a template and an instance is that an instance is scheduled, and changes with the changes of the template.
 
 *******************************************************************************
 
-ItemTemplate: {
+Template: {
     Name:String,
     Length:Long,
-    Instances: Array<TemplateInstance>
+    Instances: Array<Instance>
 
     Variables
     Calculated Variable Summaries
@@ -22,17 +24,17 @@ ItemTemplate: {
     Share Visibility
 }
 
-ItemName___
+Tempalte/InstanceName___
 |          |
 |___Width__|  (No start, relative end)
 
-TemplateInstance {
-    Parent: [TimeLine, OtherItemTemplate]
+Instance {
+    Parent: [TimeLine, OtherTemplate]
     Start:Long,
     Priority
 }
 
-ItemName___
+Tempalte/InstanceName___
 |          |
 Start      |Priority
 |          |
@@ -41,7 +43,7 @@ Start      |Priority
 *******************************************************************************
 
 TimeLine {
-    TemplateInstances: max-size-arry-100s
+    Instances: max-size-arry-100s
 }
 
 YearLine__________________________________________________________________________________________
@@ -56,7 +58,7 @@ Priority 5
 *******************************************************************************
 
 Accountability Queue {
-    Unaccounted_For_Templates: Array<TemplateInstance>
+    Unaccounted_For_Templates: Array<Instance>
 }
 
 
@@ -75,8 +77,8 @@ the API validates the User
 now the user gets access to their personal data
 
 The user has a:
-    TimeLine: Collection of type TemplateInstance
-    itemsLibrary: Collection of type ItemTemplate
+    TimeLine: Collection of type Instance
+    Tempalte/InstancesLibrary: Collection of type Template
     variablesLibrary: Collection of type Variable
     DisplayName: Unique String
     email: Unique email
