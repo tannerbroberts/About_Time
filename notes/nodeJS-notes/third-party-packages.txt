@@ -1,0 +1,30 @@
+npmjs.com/package/<packagename>: This is a helpful website when searching for new packages to use in nodejs
+
+npm install <packagename>: installs a package by name
+
+    note: running npm intall by itself installs everything from package.json
+
+    installation flags:
+    
+        --save-dev: something we only use in development
+        --save: production dependency
+        -g: install globally
+
+node_modules folder: A huge folder where third party dependencies are installed. The file should never be in github, because it's huge.
+
+3 levels of Modules in nodejs:
+
+    3rd party modules: need to be installed via npm install as well as imported using the require('<packagename>') syntax
+
+    Core modules: don't need an npm install:
+
+        examples include: fs, path, http
+
+    global features don't need to be imported
+
+express:
+
+body-parser:
+
+nodemon:
+

@@ -1,0 +1,45 @@
+npm: A feature installed with nodejs, and is used to install third party packages
+
+npm init: builds a package.json file (configuration file) and allows the use of npm install: <package>
+
+"scripts" object in package.json: allows us to run a script with npm run <script-name>
+
+Deep Dive: https://code.visualstudio.com/docs/nodejs/nodejs-debugging
+
+Udemy course summary: Section 4: Improved Development Workflow and Debugging: Lesson 55: Wrap Up
+
+The debugger:
+
+    Configuring the debugger:
+
+        1) menu -> Run -> Add Configuration -> node.js
+
+        2) <"restart": true>: This option makes the debugger restart with nodemon on changes
+
+        3) <"program": "${workspaceFolder}/server.js">: Using this makes it so you don't need to have your server file selected
+
+        4) <"console: "integratedTerminal">: This funnels debugging output to the regular terminal.
+
+             This used to be important because nodemon didn't like to quit with the rest of the debugging, so you needed access to the terminal after you quit debugging to Ctrl+C (quit) the nodemon process.
+
+             These days, that bug has been fixed, and now it's just convenient to have console logs in a different terminal if you want.
+
+    Starting the debugger:
+
+        1) select your server file (server.js, app.js) (you only need to do this if you didn't follow configuration step #3)
+
+        2) in the menu, select Run, then debug (or hit F5)
+
+        3) select nodejs as your debugging option
+
+    Debugger usage:
+
+        Break points: marked in the file next to the line numbers. The program stops st these
+
+        Continue (F5): Starts the program from the beginning or the most recent break point
+
+        Hover: The variables before the breakpoint will now be readable on hover
+
+        Debug Console: The console knows about variables from the current scope, and can run commands on them
+
+        Variables: Variables can be changed in the debugging tab, those changes will take effect in the current debugging session only.
