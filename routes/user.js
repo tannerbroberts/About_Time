@@ -1,7 +1,5 @@
 const express = require('express');
-
 const userController = require('../controllers/user');
-
 const router = express.Router();
 
 router.get('/addTemplate', userController.getAddTemplate);
@@ -19,3 +17,5 @@ router.post('/deleteTemplate', userController.postDeleteTemplate);
 router.get('/getTemplates', userController.getGetTemplates);
 
 router.post('/getTemplates', userController.postGetTemplates);
+
+module.exports = router;

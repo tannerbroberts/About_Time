@@ -1,0 +1,13 @@
+Entry of
+    Templates
+        Other templates list
+        Variables
+    Variables
+        Other Variables
+View template summary
+
+Things to keep in mind:
+    Infinite parent loops
+    how Instances are managed
+    how updates happen
+    how summary calculations are done
